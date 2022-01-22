@@ -59,16 +59,14 @@
 				</div>
 				<div class="col-lg-3">
 					<nav class="header__menu header__right">
-						<ul>
-							<li><a href="#">Pages</a>
-								<ul class="dropdown">
-									<li><a href="./product-details.html">Product Details</a></li>
-									<li><a href="./shop-cart.html">Shop Cart</a></li>
-									<li><a href="./checkout.html">Checkout</a></li>
-									<li><a href="./blog-details.html">Blog Details</a></li>
-								</ul>
-							</li>
+						<div class="header__right__auth">
+                            <ul>
+							
+							<li style="margin: 0px" class="auth-link"><a href="{{route('register')}}" style="font-weight: 500;">Signup/</a></li>
+							<li style="margin: 0px" class="auth-link"><a href="{{route('login')}}" style="font-weight: 500;">Login</a></li>
+
 						</ul>
+                        </div>
 					</nav>
 				</div>
 

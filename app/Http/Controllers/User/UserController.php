@@ -32,4 +32,9 @@ class UserController extends Controller
     {
         return view('User.pages.login');
     }
+
+    public function productdetails()
+    {
+        return view('User.pages.product_details');
+    }
 }

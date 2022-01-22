@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  @include('User.includes.head')
+  @include('User-Backoffice.includes.head')
 </head>
 
 <body>
 
-  @include('User.includes.header')
+  @include('User-Backoffice.includes.header')
 
   @yield('abc')
 
-  @include('User.includes.footer')
+  @include('User-Backoffice.includes.footer')
 
 </body>
 

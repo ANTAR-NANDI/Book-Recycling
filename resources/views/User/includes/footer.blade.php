@@ -26,8 +26,8 @@
           <h6>Account</h6>
           <ul>
             <li><a href="#">My Account</a></li>
-            <li><a href="#">Checkout</a></li>
-            <li><a href="#">Wishlist</a></li>
+            <li><a href="#">My Favourites</a></li>
+            <li><a href="#">My Wishlist</a></li>
           </ul>
         </div>
       </div>

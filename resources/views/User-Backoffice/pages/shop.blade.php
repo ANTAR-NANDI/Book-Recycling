@@ -1,4 +1,4 @@
-  @extends('User.layouts.defaults')
+  @extends('User-Backoffice.layouts.defaults')
   @section('abc')
 
   <!-- Breadcrumb Begin -->

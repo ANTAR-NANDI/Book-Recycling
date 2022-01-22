@@ -25,9 +25,10 @@ Route::get('contact', [UserController::class, 'contact_us'])->name('contact');
 Route::get('shop', [UserController::class, 'shop'])->name('shop');
 Route::get('login', [UserController::class, 'login'])->name('login');
 Route::get('register', [UserController::class, 'register'])->name('register');
-Route::prefix('backoffice/')->group(function () {
+Route::get('product-details', [UserController::class, 'productdetails'])->name('product-details');
+Route::prefix('backoffice')->group(function () {
 
-    //User-Backoffice Routes
+    //User-Backoffice Routes 
     Route::get('/home', [BackOfficeController::class, 'index'])->name('backoffice-home');
     Route::get('/about', [BackOfficeController::class, 'about_us'])->name('backoffice-about');
     Route::get('/contact', [UserController::class, 'contact_us'])->name('backoffice-contact');

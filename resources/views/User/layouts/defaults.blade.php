@@ -3,6 +3,12 @@
 
 <head>
   @include('User.includes.head')
+  <style type="text/css">
+  	.auth-link a:hover {
+  text-decoration: underline;
+}
+  </style>
+}
 </head>
 
 <body>

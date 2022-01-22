@@ -19,7 +19,7 @@
 				</a></li>
 		</ul>
 		<div class="offcanvas__logo">
-			<a href="./index.html"><img src="{{ asset('User/img/logo.png')}}" alt=""></a>
+			<a href="./index.html"><img src="{{ asset('User/img/profile.png')}}" alt=""></a>
 		</div>
 		<div id="mobile-menu-wrap"></div>
 		<div class="offcanvas__auth">
@@ -60,19 +60,24 @@
 				<div class="col-lg-3">
 					<nav class="header__menu header__right">
 						<ul>
-							<li><a href="#">Pages</a>
-								<ul class="dropdown">
-									<li><a href="./product-details.html">Product Details</a></li>
-									<li><a href="./shop-cart.html">Shop Cart</a></li>
-									<li><a href="./checkout.html">My Profile</a></li>
-									<li><a href="./blog-details.html">Logout</a></li>
-								</ul>
-							</li>
+							<li class="nav-item dropdown">
+					<div class="avatar avatar-sm">
+									<img src="{{ asset('User/img/avatar-01.jpg')}}" alt="User Image" class="avatar-img rounded-circle">
+								</div>
+					<ul class="dropdown-menu" aria-labelledby="dropdown02">
+						<li><a class="dropdown-item" href="department.html">Departments</a></li>
+						<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
+					</ul>
+			  	</li>
 
 
 						</ul>
 					</nav>
+
 				</div>
+
+
+				
 
 				<div class="canvas__open">
 					<i class="fa fa-bars"></i>

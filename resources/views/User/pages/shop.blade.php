@@ -7,7 +7,7 @@
           <div class="row">
               <div class="col-lg-12">
                   <div class="breadcrumb__links">
-                      <a href="./index.html"><i class="fa fa-home"></i> Home</a>
+                      <a href="{{route('home')}}"><i class="fa fa-home"></i> Home</a>
                       <span>Shop</span>
                   </div>
               </div>
@@ -132,7 +132,7 @@
                           </div>
                           <a href="#">Filter</a>
                       </div>
-                      <div class="sidebar__sizes">
+                      <!-- <div class="sidebar__sizes">
                           <div class="section-title">
                               <h4>Shop by size</h4>
                           </div>
@@ -178,10 +178,10 @@
                                   <span class="checkmark"></span>
                               </label>
                           </div>
-                      </div>
+                      </div> -->
                       <div class="sidebar__color">
                           <div class="section-title">
-                              <h4>Shop by size</h4>
+                              <h4>Shop by Writer</h4>
                           </div>
                           <div class="size__list color__list">
                               <label for="black">

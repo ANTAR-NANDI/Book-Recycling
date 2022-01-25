@@ -42,10 +42,10 @@
                     <div class="contact__form">
                         <h5>SEND MESSAGE</h5>
                         <form action="#">
-                            <input type="text" placeholder="Name">
-                            <input type="text" placeholder="Email">
-                            <input type="text" placeholder="Website">
-                            <textarea placeholder="Message"></textarea>
+                            <input type="text" placeholder="Name" name="name">
+                            <input type="text" placeholder="Email" name="email">
+                            <!-- <input type="text" placeholder="Website"> -->
+                            <textarea placeholder="Message" name="message"></textarea>
                             <button type="submit" class="site-btn">Send Message</button>
                         </form>
                     </div>

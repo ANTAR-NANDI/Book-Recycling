@@ -6,50 +6,80 @@
 <section class="categories">
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-lg-6 p-0">
-				<div class="categories__item categories__large__item set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
-					<div class="categories__text">
-						<h1>Women’s fashion</h1>
-						<p>Sitamet, consectetur adipiscing elit, sed do eiusmod tempor incidid-unt labore
-							edolore magna aliquapendisse ultrices gravida.</p>
-						<a href="#">Shop now</a>
+			<div class="col-lg-6">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
+							<div class="categories__text">
+								<h4>কম্পিউটার, ইন্টারনেট ও প্রোগ্রামিং</h4>
+								<p style="color:black">358 items</p>
+								<a href="#">Shop now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
+							<div class="categories__text">
+								<h4>সায়েন্স ফিকশন</h4>
+								<p style="color:black">273 items</p>
+								<a href="#">Shop now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
+							<div class="categories__text">
+								<h4>বিদেশি ভাষার বই</h4>
+								<p style="color:black">159 items</p>
+								<a href="#">Shop now</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
+							<div class="categories__text">
+								<h4>বিদেশি ভাষার বই</h4>
+								<p style="color:black">792 items</p>
+								<a href="#">Shop now</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="col-lg-6">
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/categories/category-2.jpg')}}">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
 							<div class="categories__text">
-								<h4>Men’s fashion</h4>
-								<p>358 items</p>
+								<h4>কম্পিউটার, ইন্টারনেট ও প্রোগ্রামিং</h4>
+								<p style="color:black">358 items</p>
 								<a href="#">Shop now</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
 							<div class="categories__text">
-								<h4>Kid’s fashion</h4>
-								<p>273 items</p>
+								<h4>সায়েন্স ফিকশন</h4>
+								<p style="color:black">273 items</p>
 								<a href="#">Shop now</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
 							<div class="categories__text">
-								<h4>Cosmetics</h4>
-								<p>159 items</p>
+								<h4>বিদেশি ভাষার বই</h4>
+								<p style="color:black">159 items</p>
 								<a href="#">Shop now</a>
 							</div>
 						</div>
 					</div>
 					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
+						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
 							<div class="categories__text">
-								<h4>Accessories</h4>
-								<p>792 items</p>
+								<h4>বিদেশি ভাষার বই</h4>
+								<p style="color:black">792 items</p>
 								<a href="#">Shop now</a>
 							</div>
 						</div>
@@ -65,19 +95,22 @@
 <section class="product spad">
 	<div class="container">
 		<div class="row">
-			<div class="col-lg-4 col-md-4">
+			<div class="col-lg-2 col-md-2">
 				<div class="section-title">
 					<h4>New product</h4>
 				</div>
 			</div>
-			<div class="col-lg-8 col-md-8">
+			<div class="col-lg-10 col-md-10">
 				<ul class="filter__controls">
 					<li class="active" data-filter="*">All</li>
-					<li data-filter=".women">Women’s</li>
-					<li data-filter=".men">Men’s</li>
-					<li data-filter=".kid">Kid’s</li>
-					<li data-filter=".accessories">Accessories</li>
-					<li data-filter=".cosmetic">Cosmetics</li>
+					<li data-filter=".women">Drama's</li>
+					<li data-filter=".men">Thriller’s</li>
+					<li data-filter=".kid">Comics’s</li>
+					<li data-filter=".accessories">Romantic</li>
+					<li data-filter=".cosmetic">Biography</li>
+					<li data-filter=".kid">Comics’s</li>
+					<li data-filter=".accessories">Romantic</li>
+					<li data-filter=".cosmetic">Biography</li>
 				</ul>
 			</div>
 		</div>
@@ -94,14 +127,10 @@
 					</div>
 					<div class="product__item__text">
 						<h6><a href="#">Buttons tweed blazer</a></h6>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
 						<div class="product__price">$ 59.0</div>
+						<a href="{{route('product-details')}}">
+							<button type="button" class="btn btn-light btn-sm mt-2" data-mdb-ripple-color="dark">Details</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -116,14 +145,11 @@
 					</div>
 					<div class="product__item__text">
 						<h6><a href="#">Flowy striped skirt</a></h6>
+
+						<div class="product__price">Exchange</div>
 						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
+							<button type="button" class="btn btn-light btn-sm mt-2" data-mdb-ripple-color="dark">Details</button>
 						</div>
-						<div class="product__price">$ 49.0</div>
 					</div>
 				</div>
 			</div>
@@ -267,40 +293,6 @@
 </section>
 <!-- Product Section End -->
 
-<!-- Banner Section Begin -->
-<section class="banner set-bg" data-setbg="{{ asset('User/img/banner/banner-1.jpg')}}')}}')}}')}}">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-7 col-lg-8 m-auto">
-				<div class="banner__slider owl-carousel">
-					<div class="banner__item">
-						<div class="banner__text">
-							<span>The Chloe Collection</span>
-							<h1>The Project Jacket</h1>
-							<a href="#">Shop now</a>
-						</div>
-					</div>
-					<div class="banner__item">
-						<div class="banner__text">
-							<span>The Chloe Collection</span>
-							<h1>The Project Jacket</h1>
-							<a href="#">Shop now</a>
-						</div>
-					</div>
-					<div class="banner__item">
-						<div class="banner__text">
-							<span>The Chloe Collection</span>
-							<h1>The Project Jacket</h1>
-							<a href="#">Shop now</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Banner Section End -->
-
 <!-- Trend Section Begin -->
 <section class="trend spad">
 	<div class="container">
@@ -314,49 +306,56 @@
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/ht-1.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Chain bucket bag</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+
+							<div class="trend__item__text">
+								<h6>Chain bucket bag</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 					<div class="trend__item">
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/ht-2.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Pendant earrings</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+							<div class="trend__item__text">
+								<h6>Pendant earrings</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 					<div class="trend__item">
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/ht-3.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Cotton T-Shirt</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+							<div class="trend__item__text">
+								<h6>Cotton T-Shirt</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -369,17 +368,19 @@
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/bs-1.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Cotton T-Shirt</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+							<div class="trend__item__text">
+								<h6>Cotton T-Shirt</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 					<div class="trend__item">
 						<div class="trend__item__pic">
@@ -404,17 +405,19 @@
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/bs-3.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Round leather bag</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+							<div class="trend__item__text">
+								<h6>Round leather bag</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -427,49 +430,55 @@
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/f-1.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Bow wrap skirt</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+							<div class="trend__item__text">
+								<h6>Bow wrap skirt</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 					<div class="trend__item">
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/f-2.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Metallic earrings</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+							<div class="trend__item__text">
+								<h6>Metallic earrings</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 					<div class="trend__item">
 						<div class="trend__item__pic">
 							<img src="{{ asset('User/img/trend/f-3.jpg')}}" alt="">
 						</div>
-						<div class="trend__item__text">
-							<h6>Flap cross-body bag</h6>
-							<div class="rating">
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
-								<i class="fa fa-star"></i>
+						<a href="#">
+							<div class="trend__item__text">
+								<h6>Flap cross-body bag</h6>
+								<div class="rating">
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+									<i class="fa fa-star"></i>
+								</div>
+								<div class="product__price">$ 59.0</div>
 							</div>
-							<div class="product__price">$ 59.0</div>
-						</div>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -479,7 +488,7 @@
 <!-- Trend Section End -->
 
 <!-- Discount Section Begin -->
-<section class="discount">
+<!-- <section class="discount">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 p-0">
@@ -517,7 +526,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- Discount Section End -->
 
 <!-- Services Section Begin -->
@@ -556,63 +565,5 @@
 	</div>
 </section>
 <!-- Services Section End -->
-
-<!-- Instagram Begin -->
-<div class="instagram">
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-lg-2 col-md-4 col-sm-4 p-0">
-				<div class="instagram__item set-bg" data-setbg="{{ asset('User/img/instagram/insta-1.jpg')}}">
-					<div class="instagram__text">
-						<i class="fa fa-instagram"></i>
-						<a href="#">@ ashion_shop</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 p-0">
-				<div class="instagram__item set-bg" data-setbg="{{ asset('User/img/instagram/insta-2.jpg')}}">
-					<div class="instagram__text">
-						<i class="fa fa-instagram"></i>
-						<a href="#">@ ashion_shop</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 p-0">
-				<div class="instagram__item set-bg" data-setbg="{{ asset('User/img/instagram/insta-3.jpg')}}">
-					<div class="instagram__text">
-						<i class="fa fa-instagram"></i>
-						<a href="#">@ ashion_shop</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 p-0">
-				<div class="instagram__item set-bg" data-setbg="{{ asset('User/img/instagram/insta-4.jpg')}}">
-					<div class="instagram__text">
-						<i class="fa fa-instagram"></i>
-						<a href="#">@ ashion_shop</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 p-0">
-				<div class="instagram__item set-bg" data-setbg="{{ asset('User/img/instagram/insta-5.jpg')}}">
-					<div class="instagram__text">
-						<i class="fa fa-instagram"></i>
-						<a href="#">@ ashion_shop</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-sm-4 p-0">
-				<div class="instagram__item set-bg" data-setbg="{{ asset('User/img/instagram/insta-6.jpg')}}">
-					<div class="instagram__text">
-						<i class="fa fa-instagram"></i>
-						<a href="#">@ ashion_shop</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<!-- Instagram End -->
 
 @stop

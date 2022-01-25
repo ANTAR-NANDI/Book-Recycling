@@ -369,13 +369,14 @@ ol {
 
 .header__menu ul li .dropdown {
     position: absolute;
-    left: 0;
-    top: 56px;
-    width: 150px;
-    background: #111111;
+    left: 60px;
+    top: 70px;
+    margin: 0px;
+    width: 100px;
+    background: hsl(0, 23%, 95%);
     text-align: left;
     padding: 2px 0;
-    z-index: 9;
+    z-index: 7;
     opacity: 0;
     visibility: hidden;
     -webkit-transition: all, 0.3s;
@@ -390,10 +391,14 @@ ol {
 
 .header__menu ul li .dropdown li a {
     font-size: 14px;
-    color: #ffffff;
+    color: #0a0909;
     font-weight: 400;
     padding: 8px 20px;
     text-transform: capitalize;
+}
+
+.dropdown a:hover {
+    background-color: #4896da;
 }
 
 .header__menu ul li .dropdown li a:after {

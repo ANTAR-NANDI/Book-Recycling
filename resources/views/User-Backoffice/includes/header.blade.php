@@ -43,32 +43,39 @@
 						<ul>
 							<li class="active"><a href="{{route('backoffice-home')}}">Home</a></li>
 							<li><a href="{{route('backoffice-shop')}}">Shop</a></li>
-							<li><a href="#">Pages</a>
-								<ul class="dropdown">
-									<li><a href="./product-details.html">Product Details</a></li>
-									<li><a href="./shop-cart.html">Shop Cart</a></li>
-									<li><a href="./checkout.html">Checkout</a></li>
-									<li><a href="./blog-details.html">Blog Details</a></li>
-								</ul>
-							</li>
 							<li><a href="{{route('backoffice-about')}}">About</a></li>
 							<li><a href="{{route('backoffice-contact')}}">Contact</a></li>
+							<li><a href="{{route('backoffice-contact')}}">Post A Book</a></li>
+
+
 
 						</ul>
 					</nav>
 				</div>
 				<div class="col-lg-3">
 					<nav class="header__menu header__right">
-						<ul>
+						<ul style="margin:0px">
 							<li class="nav-item dropdown">
-					<div class="avatar avatar-sm">
-									<img src="{{ asset('User/img/avatar-01.jpg')}}" alt="User Image" class="avatar-img rounded-circle">
-								</div>
-					<ul class="dropdown-menu" aria-labelledby="dropdown02">
-						<li><a class="dropdown-item" href="department.html">Departments</a></li>
-						<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
-					</ul>
-			  	</li>
+								<a href="{{route('home')}}"><img src="{{ asset('User/img/logo1.png')}}" alt="" width="50" height="50"></a>
+								<ul class="dropdown">
+									<li><a href="./product-details.html">Profile</a></li>
+									<li><a href="./shop-cart.html">Messages</a></li>
+									<li><a href="./checkout.html">Checkout</a></li>
+									<li><a href="./blog-details.html">Logout</a></li>
+								</ul>
+								<!-- <ul class="dropdown-menu">
+									<li><a class="dropdown-item" href="department.html">Departments</a></li>
+									<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
+								</ul> -->
+							</li>
+
+							<!-- <li class="nav-item dropdown">
+								<a class="dropdown-item" href="department.html">Departments</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown02">
+									<li><a class="dropdown-item" href="department.html">Departments</a></li>
+									<li><a class="dropdown-item" href="department-single.html">Department Single</a></li>
+								</ul>
+							</li> -->
 
 
 						</ul>
@@ -77,7 +84,7 @@
 				</div>
 
 
-				
+
 
 				<div class="canvas__open">
 					<i class="fa fa-bars"></i>

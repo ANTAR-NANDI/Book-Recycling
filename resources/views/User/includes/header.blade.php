@@ -43,14 +43,14 @@
 						<ul>
 							<li class="active"><a href="{{route('home')}}">Home</a></li>
 							<li><a href="{{route('shop')}}">Shop</a></li>
-							<li><a href="#">Pages</a>
+							<!-- <li><a href="#">Pages</a>
 								<ul class="dropdown">
 									<li><a href="./product-details.html">Product Details</a></li>
 									<li><a href="./shop-cart.html">Shop Cart</a></li>
 									<li><a href="./checkout.html">Checkout</a></li>
 									<li><a href="./blog-details.html">Blog Details</a></li>
 								</ul>
-							</li>
+							</li> -->
 							<li><a href="{{route('about')}}">About</a></li>
 							<li><a href="{{route('contact')}}">Contact</a></li>
 

@@ -19,7 +19,9 @@
 								@endforeach
 							</ul>
 						</div>
+
 						@endif
+						<!-- <span class="class=alert alert-danger">{{ $errors->first('firstname') }}</span> -->
 						@if(Session::has('message'))
 						<p class="alert alert-info">{{ Session::get('message') }}</p>
 						@endif
@@ -45,7 +47,7 @@
 										<label class="focus-label">Create Password</label>
 										<div class="form-group form-focus">
 											<input type="password" name="password" class="form-control floating">
-											<label class="focus-label">Create Password</label>
+
 										</div>
 									</div>
 									<div class="col-md-6">

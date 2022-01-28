@@ -41,10 +41,24 @@
                     </div>
                     <div class="contact__form">
                         <h5>SEND MESSAGE</h5>
-                        <form action="#">
-                            <input type="text" placeholder="Name" name="name">
-                            <input type="text" placeholder="Email" name="email">
-                            <!-- <input type="text" placeholder="Website"> -->
+                        @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                <h6>{{ $error }}</h6>
+                                @endforeach
+                            </ul>
+                        </div>
+
+                        @endif
+                        <!-- <span class="class=alert alert-danger">{{ $errors->first('firstname') }}</span> -->
+                        @if(Session::has('message'))
+                        <p class="alert alert-info">{{ Session::get('message') }}</p>
+                        @endif
+                        <form class="form-horizontal" method="post" action="{{ URL::to('contactstore')}}">
+                            @csrf
+                            <input type="email" placeholder="Email" name="email">
+                            <input type="text" placeholder="Mobile" name="mobile">
                             <textarea placeholder="Message" name="message"></textarea>
                             <button type="submit" class="site-btn">Send Message</button>
                         </form>

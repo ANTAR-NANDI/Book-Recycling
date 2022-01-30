@@ -3,10 +3,10 @@
  	<header class="header">
  		<div class="page-brand">
  			<a class="link" href="index.html">
- 				<span class="brand">Admin
- 					<span class="brand-tip">CAST</span>
+ 				<span class="brand">Book-
+ 					<span class="brand-tip">Recycling</span>
  				</span>
- 				<span class="brand-mini">AC</span>
+ 				<span class="brand-mini">BR</span>
  			</a>
  		</div>
  		<div class="flexbox flex-1">
@@ -54,7 +54,7 @@
  								<a class="list-group-item">
  									<div class="media">
  										<div class="media-img">
- 											<img src="./assets/img/users/u2.jpg" />
+ 											<img src="{{ asset('Admin/img/users/u2.jpg')}}" />
  										</div>
  										<div class="media-body">
  											<div class="font-strong"></div>Becky Brooks<small class="text-muted float-right">18 mins</small>
@@ -65,7 +65,7 @@
  								<a class="list-group-item">
  									<div class="media">
  										<div class="media-img">
- 											<img src="./assets/img/users/u3.jpg" />
+ 											<img src="{{ asset('Admin/img/users/u3.jpg')}}" />
  										</div>
  										<div class="media-body">
  											<div class="font-strong"></div>Frank Cruz<small class="text-muted float-right">18 mins</small>
@@ -76,7 +76,7 @@
  								<a class="list-group-item">
  									<div class="media">
  										<div class="media-img">
- 											<img src="./assets/img/users/u4.jpg" />
+ 											<img src="{{ asset('Admin/img/users/u4.jpg')}}" />
  										</div>
  										<div class="media-body">
  											<div class="font-strong"></div>Rose Pearson<small class="text-muted float-right">3 hrs</small>
@@ -145,10 +145,10 @@
  				</li>
  				<li class="dropdown dropdown-user">
  					<a class="nav-link dropdown-toggle link" data-toggle="dropdown">
- 						<img src="./assets/img/admin-avatar.png" />
+ 						<img src="{{ asset('Admin/img/admin-avatar.png')}}" />
  						<span></span>Admin<i class="fa fa-angle-down m-l-5"></i></a>
  					<ul class="dropdown-menu dropdown-menu-right">
- 						<a class="dropdown-item" href="profile.html"><i class="fa fa-user"></i>Profile</a>
+ 						<a class="dropdown-item" href="{{route('admin-profile')}}"><i class="fa fa-user"></i>Profile</a>
  						<a class="dropdown-item" href="profile.html"><i class="fa fa-cog"></i>Settings</a>
  						<a class="dropdown-item" href="javascript:;"><i class="fa fa-support"></i>Support</a>
  						<li class="dropdown-divider"></li>

@@ -11,4 +11,8 @@ class AdminController extends Controller
     {
         return view('Admin.pages.index');
     }
+    public function Profile()
+    {
+        return view('Admin.pages.index');
+    }
 }

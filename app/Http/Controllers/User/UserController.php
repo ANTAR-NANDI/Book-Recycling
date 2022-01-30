@@ -65,15 +65,18 @@ class UserController extends Controller
     {
         //dd($request);
         $email = $request->email;
-        $password = md5($request->password);
+        $password = $request->password;
 
+        //dd($request);
         $obj = User::where('email', '=', $email)
             ->where('password', '=', $password)
             ->first();
+        //dd($obj);
         if ($obj) {
-            // dd($obj);
+           // dd($obj);
             $request->session()->put('userid', $obj->id);
-            $request->session()->put('username', $obj->name);
+            $request->session()->put('firstname', $obj->firstname);
+            $request->session()->put('lastname', $obj->lastname);
             $request->session()->put('userrole', $obj->role);
 
             if ($request->session()->get('userrole') == 'user') {

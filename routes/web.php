@@ -38,4 +38,5 @@ Route::prefix('admin')->group(function () {
 
     //Admin Routes 
     Route::get('/home', [AdminController::class, 'index'])->name('admin-home');
+    Route::get('/profile', [AdminController::class, 'profile'])->name('admin-profile');
 });

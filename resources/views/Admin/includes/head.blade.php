@@ -1,24 +1,14 @@
 <meta charset="UTF-8">
-<meta name="description" content="Ashion Template">
-<meta name="keywords" content="Ashion, unica, creative, html">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>Ashion | Template</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width initial-scale=1.0">
+<title>Book - Recycling Admin Dashboard</title>
+<!-- GLOBAL MAINLY STYLES-->
+<link href="{{ asset('Admin/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" />
+<link href="{{ asset('Admin/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
+<link href="{{ asset('Admin/vendors/themify-icons/css/themify-icons.css')}}" rel="stylesheet" />
+<!-- PLUGINS STYLES-->
+<link href="{{ asset('Admin/vendors/jvectormap/jquery-jvectormap-2.0.3.css')}}" rel="stylesheet" />
+<!-- THEME STYLES-->
+<link href="{{ asset('Admin/css/main.min.css')}}" rel="stylesheet" />
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-<!-- Css Styles -->
-<link rel="stylesheet" href="{{ asset('User/css/bootstrap.min.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('User/css/font-awesome.min.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('User/css/elegant-icons.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('User/css/jquery-ui.min.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('User/css/magnific-popup.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('User/css/owl.carousel.min.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('User/css/slicknav.min.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('User/css/style.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('css/style.css')}}" type="text/css">
-<link rel="stylesheet" href="{{ asset('Auth/style.css')}}" type="text/css">
-
-<link rel="stylesheet" href="{{ asset('User/css/bootstrap.min.css')}}" type="text/css">
+<!-- <link rel="stylesheet" href="{{ asset('Admin/css/bootstrap.min.css')}}" type="text/css"> -->

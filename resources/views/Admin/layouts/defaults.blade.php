@@ -2,22 +2,18 @@
 <html lang="en">
 
 <head>
-  @include('User.includes.head')
-  <style type="text/css">
-  	.auth-link a:hover {
-  text-decoration: underline;
-}
-  </style>
-}
+  @include('Admin.includes.head')
+
 </head>
 
-<body>
+<body class="fixed-navbar">
 
-  @include('User.includes.header')
+  @include('Admin.includes.header')
 
+  @include('Admin.includes.sidebar')
   @yield('abc')
 
-  @include('User.includes.footer')
+  @include('Admin.includes.footer')
 
 </body>
 

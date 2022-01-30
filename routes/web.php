@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\User\UserController;
 use App\Http\Controllers\Backofice\BackOfficeController;
+use App\Http\Controllers\Admin\AdminController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,10 +36,6 @@ Route::prefix('backoffice')->group(function () {
 });
 Route::prefix('admin')->group(function () {
 
-    //User-Backoffice Routes 
-    Route::get('/home', [BackOfficeController::class, 'index'])->name('backoffice-home');
-    Route::get('/about', [BackOfficeController::class, 'about_us'])->name('backoffice-about');
-    Route::get('/contact', [BackOfficeController::class, 'contact_us'])->name('backoffice-contact');
-    Route::get('/shop', [BackOfficeController::class, 'shop'])->name('backoffice-shop');
-    Route::get('/logout', [BackOfficeController::class, 'logout'])->name('backoffice-logout');
+    //Admin Routes 
+    Route::get('/home', [AdminController::class, 'index'])->name('admin-home');
 });

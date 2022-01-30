@@ -1,78 +1,162 @@
-<div class="container">
-
-	<!-- Page Preloder -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
-
-	<!-- Offcanvas Menu Begin -->
-	<div class="offcanvas-menu-overlay"></div>
-	<div class="offcanvas-menu-wrapper">
-		<div class="offcanvas__close">+</div>
-		<ul class="offcanvas__widget">
-			<li><span class="icon_search search-switch"></span></li>
-			<li><a href="#"><span class="icon_heart_alt"></span>
-					<div class="tip">2</div>
-				</a></li>
-			<li><a href="#"><span class="icon_bag_alt"></span>
-					<div class="tip">2</div>
-				</a></li>
-		</ul>
-		<div class="offcanvas__logo">
-			<a href="./index.html"><img src="{{ asset('User/img/logo.png')}}" alt=""></a>
-		</div>
-		<div id="mobile-menu-wrap"></div>
-		<div class="offcanvas__auth">
-			<a href="#">Login</a>
-			<a href="#">Register</a>
-		</div>
-	</div>
-	<!-- Offcanvas Menu End -->
-
-	<!-- Header Section Begin -->
-	<header class="header">
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-xl-3 col-lg-2">
-					<div class="header__logo">
-						<a href="{{route('home')}}"><img src="{{ asset('User/img/logo.png')}}" alt=""></a>
-					</div>
-				</div>
-				<div class="col-xl-6 col-lg-7">
-					<nav class="header__menu header__right">
-						<ul>
-							<li class="active"><a href="{{route('home')}}">Home</a></li>
-							<li><a href="{{route('shop')}}">Shop</a></li>
-							<!-- <li><a href="#">Pages</a>
-								<ul class="dropdown">
-									<li><a href="./product-details.html">Product Details</a></li>
-									<li><a href="./shop-cart.html">Shop Cart</a></li>
-									<li><a href="./checkout.html">Checkout</a></li>
-									<li><a href="./blog-details.html">Blog Details</a></li>
-								</ul>
-							</li> -->
-							<li><a href="{{route('about')}}">About</a></li>
-							<li><a href="{{route('contact')}}">Contact</a></li>
-
-						</ul>
-					</nav>
-				</div>
-				<div class="col-lg-3">
-					<nav class="header__menu header__right">
-						<div class="header__right__auth">
-                            <ul>
-							
-							<li style="margin: 0px" class="auth-link"><a href="{{route('register')}}" style="font-weight: 500;">Signup/</a></li>
-							<li style="margin: 0px" class="auth-link"><a href="{{route('login')}}" style="font-weight: 500;">Login</a></li>
-
-						</ul>
-                        </div>
-					</nav>
-				</div>
-
-				<div class="canvas__open">
-					<i class="fa fa-bars"></i>
-				</div>
-			</div>
-	</header>
-	<!-- Header Section End -->
+ <div class="page-wrapper">
+ 	<!-- START HEADER-->
+ 	<header class="header">
+ 		<div class="page-brand">
+ 			<a class="link" href="index.html">
+ 				<span class="brand">Admin
+ 					<span class="brand-tip">CAST</span>
+ 				</span>
+ 				<span class="brand-mini">AC</span>
+ 			</a>
+ 		</div>
+ 		<div class="flexbox flex-1">
+ 			<!-- START TOP-LEFT TOOLBAR-->
+ 			<ul class="nav navbar-toolbar">
+ 				<li>
+ 					<a class="nav-link sidebar-toggler js-sidebar-toggler"><i class="ti-menu"></i></a>
+ 				</li>
+ 				<li>
+ 					<form class="navbar-search" action="javascript:;">
+ 						<div class="rel">
+ 							<span class="search-icon"><i class="ti-search"></i></span>
+ 							<input class="form-control" placeholder="Search here...">
+ 						</div>
+ 					</form>
+ 				</li>
+ 			</ul>
+ 			<!-- END TOP-LEFT TOOLBAR-->
+ 			<!-- START TOP-RIGHT TOOLBAR-->
+ 			<ul class="nav navbar-toolbar">
+ 				<li class="dropdown dropdown-inbox">
+ 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope-o"></i>
+ 						<span class="badge badge-primary envelope-badge">9</span>
+ 					</a>
+ 					<ul class="dropdown-menu dropdown-menu-right dropdown-menu-media">
+ 						<li class="dropdown-menu-header">
+ 							<div>
+ 								<span><strong>9 New</strong> Messages</span>
+ 								<a class="pull-right" href="mailbox.html">view all</a>
+ 							</div>
+ 						</li>
+ 						<li class="list-group list-group-divider scroller" data-height="240px" data-color="#71808f">
+ 							<div>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<img src="./assets/img/users/u1.jpg" />
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-strong"> </div>Jeanne Gonzalez<small class="text-muted float-right">Just now</small>
+ 											<div class="font-13">Your proposal interested me.</div>
+ 										</div>
+ 									</div>
+ 								</a>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<img src="./assets/img/users/u2.jpg" />
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-strong"></div>Becky Brooks<small class="text-muted float-right">18 mins</small>
+ 											<div class="font-13">Lorem Ipsum is simply.</div>
+ 										</div>
+ 									</div>
+ 								</a>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<img src="./assets/img/users/u3.jpg" />
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-strong"></div>Frank Cruz<small class="text-muted float-right">18 mins</small>
+ 											<div class="font-13">Lorem Ipsum is simply.</div>
+ 										</div>
+ 									</div>
+ 								</a>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<img src="./assets/img/users/u4.jpg" />
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-strong"></div>Rose Pearson<small class="text-muted float-right">3 hrs</small>
+ 											<div class="font-13">Lorem Ipsum is simply.</div>
+ 										</div>
+ 									</div>
+ 								</a>
+ 							</div>
+ 						</li>
+ 					</ul>
+ 				</li>
+ 				<li class="dropdown dropdown-notification">
+ 					<a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell-o rel"><span class="notify-signal"></span></i></a>
+ 					<ul class="dropdown-menu dropdown-menu-right dropdown-menu-media">
+ 						<li class="dropdown-menu-header">
+ 							<div>
+ 								<span><strong>5 New</strong> Notifications</span>
+ 								<a class="pull-right" href="javascript:;">view all</a>
+ 							</div>
+ 						</li>
+ 						<li class="list-group list-group-divider scroller" data-height="240px" data-color="#71808f">
+ 							<div>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<span class="badge badge-success badge-big"><i class="fa fa-check"></i></span>
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-13">4 task compiled</div><small class="text-muted">22 mins</small>
+ 										</div>
+ 									</div>
+ 								</a>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<span class="badge badge-default badge-big"><i class="fa fa-shopping-basket"></i></span>
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-13">You have 12 new orders</div><small class="text-muted">40 mins</small>
+ 										</div>
+ 									</div>
+ 								</a>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<span class="badge badge-danger badge-big"><i class="fa fa-bolt"></i></span>
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-13">Server #7 rebooted</div><small class="text-muted">2 hrs</small>
+ 										</div>
+ 									</div>
+ 								</a>
+ 								<a class="list-group-item">
+ 									<div class="media">
+ 										<div class="media-img">
+ 											<span class="badge badge-success badge-big"><i class="fa fa-user"></i></span>
+ 										</div>
+ 										<div class="media-body">
+ 											<div class="font-13">New user registered</div><small class="text-muted">2 hrs</small>
+ 										</div>
+ 									</div>
+ 								</a>
+ 							</div>
+ 						</li>
+ 					</ul>
+ 				</li>
+ 				<li class="dropdown dropdown-user">
+ 					<a class="nav-link dropdown-toggle link" data-toggle="dropdown">
+ 						<img src="./assets/img/admin-avatar.png" />
+ 						<span></span>Admin<i class="fa fa-angle-down m-l-5"></i></a>
+ 					<ul class="dropdown-menu dropdown-menu-right">
+ 						<a class="dropdown-item" href="profile.html"><i class="fa fa-user"></i>Profile</a>
+ 						<a class="dropdown-item" href="profile.html"><i class="fa fa-cog"></i>Settings</a>
+ 						<a class="dropdown-item" href="javascript:;"><i class="fa fa-support"></i>Support</a>
+ 						<li class="dropdown-divider"></li>
+ 						<a class="dropdown-item" href="login.html"><i class="fa fa-power-off"></i>Logout</a>
+ 					</ul>
+ 				</li>
+ 			</ul>
+ 			<!-- END TOP-RIGHT TOOLBAR-->
+ 		</div>
+ 	</header>
+ 	<!-- END HEADER-->

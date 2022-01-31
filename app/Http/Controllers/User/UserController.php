@@ -10,6 +10,7 @@ use App\Http\Requests\User\StoreContactRequest;
 use App\Models\User;
 use App\Models\Contact;
 use Carbon\Carbon;
+use Session;
 
 class UserController extends Controller
 {
@@ -91,6 +92,11 @@ class UserController extends Controller
         } else {
             return redirect()->back()->with('invalidlogin', "Invalid Email or Password");
         }
+    }
+    public function logout()
+    {
+        Session::flush();
+        return redirect()->to('/');
     }
     public function contactstore(StoreContactRequest $request)
     {

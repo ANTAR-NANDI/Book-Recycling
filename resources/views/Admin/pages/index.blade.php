@@ -9,7 +9,7 @@
 				<div class="ibox bg-success color-white widget-stat">
 					<div class="ibox-body">
 						<h2 class="m-b-5 font-strong">201</h2>
-						<div class="m-b-5">NEW ORDERS</div><i class="ti-shopping-cart widget-stat-icon"></i>
+						<div class="m-b-5">NEW ORDERS</div><a href="#"><i class="ti-shopping-cart widget-stat-icon"></i></a>
 						<div><i class="fa fa-level-up m-r-5"></i><small>25% higher</small></div>
 					</div>
 				</div>

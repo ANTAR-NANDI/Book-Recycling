@@ -10,5 +10,5 @@
 <link href="{{ asset('Admin/vendors/jvectormap/jquery-jvectormap-2.0.3.css')}}" rel="stylesheet" />
 <!-- THEME STYLES-->
 <link href="{{ asset('Admin/css/main.min.css')}}" rel="stylesheet" />
-
+<link href="{{ asset('Admin/css/main.css')}}" rel="stylesheet" />
 <!-- <link rel="stylesheet" href="{{ asset('Admin/css/bootstrap.min.css')}}" type="text/css"> -->

@@ -2,7 +2,7 @@
 @section('abc')
 <div class="content-wrapper">
     <!-- START PAGE CONTENT-->
-    <div class="page-heading">
+    <!-- <div class="page-heading">
         <h1 class="page-title">Profile</h1>
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
@@ -10,7 +10,7 @@
             </li>
             <li class="breadcrumb-item">Profile</li>
         </ol>
-    </div>
+    </div> -->
     <div class="page-content fade-in-up">
         <div class="row">
             <div class="col-lg-3 col-md-4">
@@ -61,10 +61,10 @@
                                 <a class="nav-link active" href="#tab-1" data-toggle="tab"><i class="ti-bar-chart"></i> Overview</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#tab-2" data-toggle="tab"><i class="ti-settings"></i> Settings</a>
+                                <a class="nav-link" href="#tab-2" data-toggle="tab"><i class="ti-settings"></i> Change Password </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#tab-3" data-toggle="tab"><i class="ti-announcement"></i> Feeds</a>
+                                <a class="nav-link" href="#tab-3" data-toggle="tab"><i class="ti-announcement"></i>&nbsp;Edit profile</a>
                             </li>
                         </ul>
                         <div class="tab-content">
@@ -231,6 +231,29 @@
                                 <form action="javascript:void(0)">
                                     <div class="row">
                                         <div class="col-sm-6 form-group">
+                                            <label>Old Password</label>
+                                            <input class="form-control" name="old_password" type="password" placeholder="Old Password">
+                                        </div>
+
+                                    </div>
+                                    <div class=" form-group">
+                                        <label>New Password</label>
+                                        <input class="form-control" name="new_password" type="password" placeholder="Email address">
+                                    </div>
+                                    <div class=" col-sm-6 form-group">
+                                        <label>Re-enter Password</label>
+                                        <input class="form-control" name="renew_password" type="password" placeholder="Password">
+                                    </div>
+
+                                    <div class=" col-sm-6 form-group">
+                                        <button class="btn btn-default" type="button">Change Password</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tab-pane fade" id="tab-3">
+                                <form action="javascript:void(0)">
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
                                             <label>First Name</label>
                                             <input class="form-control" type="text" placeholder="First Name">
                                         </div>
@@ -239,70 +262,22 @@
                                             <input class="form-control" type="text" placeholder="First Name">
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Email</label>
-                                        <input class="form-control" type="text" placeholder="Email address">
+                                    <div class="row">
+                                        <div class="col-sm-6 form-group">
+                                            <label>Email</label>
+                                            <input class="form-control" type="text" placeholder="First Name">
+                                        </div>
+                                        <div class="col-sm-6 form-group">
+                                            <label>Mobile</label>
+                                            <input class="form-control" type="text" placeholder="First Name">
+                                        </div>
                                     </div>
+
+
                                     <div class="form-group">
-                                        <label>Password</label>
-                                        <input class="form-control" type="password" placeholder="Password">
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="ui-checkbox">
-                                            <input type="checkbox">
-                                            <span class="input-span"></span>Remamber me</label>
-                                    </div>
-                                    <div class="form-group">
-                                        <button class="btn btn-default" type="button">Submit</button>
+                                        <button class="btn btn-default" type="button">Update Profile</button>
                                     </div>
                                 </form>
-                            </div>
-                            <div class="tab-pane fade" id="tab-3">
-                                <h5 class="text-info m-b-20 m-t-20"><i class="fa fa-bullhorn"></i> Latest Feeds</h5>
-                                <ul class="media-list media-list-divider m-0">
-                                    <li class="media">
-                                        <div class="media-img"><i class="ti-user font-18 text-muted"></i></div>
-                                        <div class="media-body">
-                                            <div class="media-heading">New customer <small class="float-right text-muted">12:05</small></div>
-                                            <div class="font-13">Lorem Ipsum is simply dummy text.</div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <div class="media-img"><i class="ti-info-alt font-18 text-muted"></i></div>
-                                        <div class="media-body">
-                                            <div class="media-heading text-warning">Server Warning <small class="float-right text-muted">12:05</small></div>
-                                            <div class="font-13">Lorem Ipsum is simply dummy text.</div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <div class="media-img"><i class="ti-announcement font-18 text-muted"></i></div>
-                                        <div class="media-body">
-                                            <div class="media-heading">7 new feedback <small class="float-right text-muted">Today</small></div>
-                                            <div class="font-13">Lorem Ipsum is simply dummy text.</div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <div class="media-img"><i class="ti-check font-18 text-muted"></i></div>
-                                        <div class="media-body">
-                                            <div class="media-heading text-success">Issue fixed <small class="float-right text-muted">12:05</small></div>
-                                            <div class="font-13">Lorem Ipsum is simply dummy text.</div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <div class="media-img"><i class="ti-shopping-cart font-18 text-muted"></i></div>
-                                        <div class="media-body">
-                                            <div class="media-heading">7 New orders <small class="float-right text-muted">12:05</small></div>
-                                            <div class="font-13">Lorem Ipsum is simply dummy text.</div>
-                                        </div>
-                                    </li>
-                                    <li class="media">
-                                        <div class="media-img"><i class="ti-reload font-18 text-muted"></i></div>
-                                        <div class="media-body">
-                                            <div class="media-heading text-danger">Server warning <small class="float-right text-muted">12:05</small></div>
-                                            <div class="font-13">Lorem Ipsum is simply dummy text.</div>
-                                        </div>
-                                    </li>
-                                </ul>
                             </div>
                         </div>
                     </div>
@@ -324,42 +299,6 @@
                 font-size: 22px
             }
         </style>
-        <div>
-            <a class="adminca-banner" href="http://admincast.com/adminca/" target="_blank">
-                <div class="adminca-banner-ribbon"><i class="fa fa-trophy mr-2"></i>PREMIUM TEMPLATE</div>
-                <div class="wrap-1">
-                    <div class="wrap-2">
-                        <div>
-                            <img src="./assets/img/adminca-banner/adminca-preview.jpg" style="height:160px;margin-top:50px;" />
-                        </div>
-                        <div class="color-white" style="margin-left:40px;">
-                            <h1 class="font-bold">ADMINCA</h1>
-                            <p class="font-16">Save your time, choose the best</p>
-                            <ul class="list-unstyled">
-                                <li class="m-b-5"><i class="ti-check m-r-5"></i>High Quality Design</li>
-                                <li class="m-b-5"><i class="ti-check m-r-5"></i>Fully Customizable and Easy Code</li>
-                                <li class="m-b-5"><i class="ti-check m-r-5"></i>Bootstrap 4 and Angular 5+</li>
-                                <li class="m-b-5"><i class="ti-check m-r-5"></i>Best Build Tools: Gulp, SaSS, Pug...</li>
-                                <li><i class="ti-check m-r-5"></i>More layouts, pages, components</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div style="flex:1;">
-                        <div class="d-flex justify-content-end wrap-3">
-                            <div class="adminca-banner-b m-r-20">
-                                <img src="./assets/img/adminca-banner/bootstrap.png" style="width:40px;margin-right:10px;" />Bootstrap v4
-                            </div>
-                            <div class="adminca-banner-b m-r-10">
-                                <img src="./assets/img/adminca-banner/angular.png" style="width:35px;margin-right:10px;" />Angular v5+
-                            </div>
-                        </div>
-                        <div class="dev-img">
-                            <img src="./assets/img/adminca-banner/sprite.png" />
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
     </div>
 
     @stop

@@ -128,7 +128,7 @@
 					<div class="product__item__text">
 						<h6><a href="#">Buttons tweed blazer</a></h6>
 						<div class="product__price">$ 59.0</div>
-						<a href="{{route('product-details')}}">
+						<a href="#">
 							<button type="button" class="btn btn-light btn-sm mt-2" data-mdb-ripple-color="dark">Details</button>
 						</a>
 					</div>

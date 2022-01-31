@@ -27,7 +27,7 @@
  			<!-- END TOP-LEFT TOOLBAR-->
  			<!-- START TOP-RIGHT TOOLBAR-->
  			<ul class="nav navbar-toolbar">
- 				<li class="dropdown dropdown-inbox">
+ 				<!-- <li class="dropdown dropdown-inbox">
  					<a class="nav-link dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope-o"></i>
  						<span class="badge badge-primary envelope-badge">9</span>
  					</a>
@@ -142,7 +142,7 @@
  							</div>
  						</li>
  					</ul>
- 				</li>
+ 				</li> -->
  				<li class="dropdown dropdown-user">
  					<a class="nav-link dropdown-toggle link" data-toggle="dropdown">
  						<img src="{{ asset('Admin/img/admin-avatar.png')}}" />
@@ -152,7 +152,7 @@
  						<a class="dropdown-item" href="profile.html"><i class="fa fa-cog"></i>Settings</a>
  						<a class="dropdown-item" href="javascript:;"><i class="fa fa-support"></i>Support</a>
  						<li class="dropdown-divider"></li>
- 						<a class="dropdown-item" href="login.html"><i class="fa fa-power-off"></i>Logout</a>
+ 						<a class="dropdown-item" href="{{route('logout')}}"><i class="fa fa-power-off"></i>Logout</a>
  					</ul>
  				</li>
  			</ul>

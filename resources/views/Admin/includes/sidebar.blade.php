@@ -11,78 +11,75 @@
      </div>
      <ul class="side-menu metismenu">
        <li>
-         <a class="active" href="index.html"><i class="sidebar-item-icon fa fa-th-large"></i>
+         <a class="active" href="{{route('admin-home')}}"><i class="sidebar-item-icon fa fa-th-large"></i>
            <span class="nav-label">Dashboard</span>
          </a>
        </li>
-       <li class="heading">FEATURES</li>
+       <!-- <li class="heading">FEATURES</li> -->
        <li>
          <a href="javascript:;"><i class="sidebar-item-icon fa fa-bookmark"></i>
-           <span class="nav-label">Basic UI</span><i class="fa fa-angle-left arrow"></i></a>
+           <span class="nav-label">Users</span><i class="fa fa-angle-left arrow"></i></a>
          <ul class="nav-2-level collapse">
            <li>
-             <a href="colors.html">Colors</a>
+             <a href="{{route('admin-user-list')}}">Manage Users</a>
            </li>
            <li>
-             <a href="typography.html">Typography</a>
-           </li>
-           <li>
-             <a href="panels.html">Panels</a>
-           </li>
-           <li>
-             <a href="buttons.html">Buttons</a>
-           </li>
-           <li>
-             <a href="tabs.html">Tabs</a>
-           </li>
-           <li>
-             <a href="alerts_tooltips.html">Alerts &amp; Tooltips</a>
-           </li>
-           <li>
-             <a href="badges_progress.html">Badges &amp; Progress</a>
-           </li>
-           <li>
-             <a href="lists.html">List</a>
-           </li>
-           <li>
-             <a href="cards.html">Card</a>
+             <a href="{{route('admin-block-user')}}">Block User</a>
            </li>
          </ul>
        </li>
        <li>
          <a href="javascript:;"><i class="sidebar-item-icon fa fa-edit"></i>
-           <span class="nav-label">Forms</span><i class="fa fa-angle-left arrow"></i></a>
+           <span class="nav-label">Books</span><i class="fa fa-angle-left arrow"></i></a>
          <ul class="nav-2-level collapse">
            <li>
-             <a href="form_basic.html">Basic Forms</a>
+             <a href="{{route('admin-books-list')}}">Manage Books</a>
            </li>
            <li>
-             <a href="form_advanced.html">Advanced Plugins</a>
+             <a href="{{route('admin-manage-post')}}">Manage Post</a>
+           </li>
+
+         </ul>
+       </li>
+       <li>
+         <a href="javascript:;"><i class="sidebar-item-icon fa fa-edit"></i>
+           <span class="nav-label">Inbox</span><i class="fa fa-angle-left arrow"></i></a>
+         <ul class="nav-2-level collapse">
+           <li>
+             <a href="{{route('admin-messages')}}">Messages</a>
            </li>
            <li>
-             <a href="form_masks.html">Form input masks</a>
+             <a href="{{route('admin-report-user')}}">Users Report</a>
            </li>
-           <li>
-             <a href="form_validation.html">Form Validation</a>
-           </li>
-           <li>
-             <a href="text_editors.html">Text Editors</a>
-           </li>
+
          </ul>
        </li>
        <li>
          <a href="javascript:;"><i class="sidebar-item-icon fa fa-table"></i>
-           <span class="nav-label">Tables</span><i class="fa fa-angle-left arrow"></i></a>
+           <span class="nav-label">Reports</span><i class="fa fa-angle-left arrow"></i></a>
          <ul class="nav-2-level collapse">
            <li>
-             <a href="table_basic.html">Basic Tables</a>
+             <a href="{{route('admin-total-sales')}}">Total Sales</a>
            </li>
-           <li>
-             <a href="datatables.html">Datatables</a>
-           </li>
+
          </ul>
        </li>
        <li>
+         <a class="active" href="{{route('admin-home')}}"><i class="sidebar-item-icon fa fa-th-large"></i>
+           <span class="nav-label">Notifications</span>
+         </a>
+       </li>
+       <li>
+         <a href="javascript:;"><i class="sidebar-item-icon fa fa-table"></i>
+           <span class="nav-label">Setting</span><i class="fa fa-angle-left arrow"></i></a>
+         <ul class="nav-2-level collapse">
+           <li>
+             <a href="{{route('admin-total-sales')}}">Total Sales</a>
+           </li>
+
+         </ul>
+       </li>
+       <!-- <li>
          <a href="javascript:;"><i class="sidebar-item-icon fa fa-bar-chart"></i>
            <span class="nav-label">Charts</span><i class="fa fa-angle-left arrow"></i></a>
          <ul class="nav-2-level collapse">
@@ -185,7 +182,7 @@
              </ul>
            </li>
          </ul>
-       </li>
+       </li> -->
      </ul>
    </div>
  </nav>

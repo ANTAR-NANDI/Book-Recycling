@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use DB;
+use Carbon\Carbon;
 
 class UserTableSeeder extends Seeder
 {
@@ -21,6 +22,7 @@ class UserTableSeeder extends Seeder
                 'email' => 'antarnandy.2@gmail.com',
                 'password' => '12345678',
                 'mobile' => '01824506162',
+                'reg_date' => Carbon::now(),
                 'role'    => 'admin',
                 'active' => 1,
                 'ispaid' => 1
@@ -33,6 +35,7 @@ class UserTableSeeder extends Seeder
                 'email' => 'rimon@gmail.com',
                 'password' => '12345678',
                 'mobile' => '01835896311',
+                'reg_date' => Carbon::now(),
                 'role'    => 'user',
                 'active' => 1,
                 'ispaid' => 1
@@ -45,6 +48,7 @@ class UserTableSeeder extends Seeder
                 'email' => 'bivash@gmail.com',
                 'password' => '12345678',
                 'mobile' => '01831147334',
+                'reg_date' => Carbon::now(),
                 'role'    => 'user',
                 'active' => 1,
                 'ispaid' => 1
@@ -57,6 +61,7 @@ class UserTableSeeder extends Seeder
                 'email' => 'rudra@gmail.com',
                 'password' => '12345678',
                 'mobile' => '01856893041',
+                'reg_date' => Carbon::now(),
                 'role'    => 'user',
                 'active' => 1,
                 'ispaid' => 1

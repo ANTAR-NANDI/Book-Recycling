@@ -52,6 +52,7 @@ class UserController extends Controller
         $obj->lastname = $request->lastname;
         $obj->email = $request->email;
         $obj->reg_date = Carbon::now();
+        $obj->expired_date =Carbon::now()->addDays(30);
         $obj->password = md5($request->password);
         $obj->mobile = $request->mobile;
         $obj->active = 1;

@@ -24,7 +24,10 @@
              <a href="{{route('admin-user-list')}}">Manage Users</a>
            </li>
            <li>
-             <a href="{{route('admin-block-user')}}">Block User</a>
+             <a href="{{route('admin-user-list')}}">Reported Users</a>
+           </li>
+           <li>
+             <a href="{{route('admin-block-user')}}">Non-Paid User</a>
            </li>
          </ul>
        </li>

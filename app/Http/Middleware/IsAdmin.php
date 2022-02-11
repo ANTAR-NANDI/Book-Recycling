@@ -19,6 +19,7 @@ class IsAdmin
         if ($request->session()->get('userrole') != 'admin') { // if userid is not set in session
             return redirect()->to('/');
         }
+
         return $next($request);
     }
 }

@@ -15,6 +15,9 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
+Route::group(
+    ['middleware' => 'IsAdmin'],
+    function () {
 Route::get('login', [UserController::class, 'login'])->name('login');
 Route::get('register', [UserController::class, 'register'])->name('register');
 Route::get('logout', [UserController::class, 'logout'])->name('logout');
@@ -26,6 +29,8 @@ Route::get('shop', [UserController::class, 'shop'])->name('shop');
 Route::post('registerstore', [UserController::class, 'registerstore'])->name('registerstore');
 Route::post('loginstore', [UserController::class, 'loginstore'])->name('loginstore');
 Route::get('contactstore', [UserController::class, 'contactstore'])->name('contactstore');
+    }
+);
 
 //User-Backoffice Routes 
 Route::group(['middleware' => 'IsUser'], function () {
@@ -49,5 +54,7 @@ Route::group(['middleware' => 'IsAdmin'], function () {
         Route::get('/messages', [AdminController::class, 'messages'])->name('admin-messages');
         Route::get('/report-user', [AdminController::class, 'report_user'])->name('admin-report-user');
         Route::get('/total-sales', [AdminController::class, 'total_sales'])->name('admin-total-sales');
+        Route::post('/update-profile/{id}', [AdminController::class, 'update_data']);
+        Route::post('/update-password/{id}', [AdminController::class, 'update_password']);
     });
 });

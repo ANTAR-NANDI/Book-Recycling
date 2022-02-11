@@ -3,6 +3,7 @@
 <meta name="viewport" content="width=device-width initial-scale=1.0">
 <title>Book - Recycling Admin Dashboard</title>
 <!-- GLOBAL MAINLY STYLES-->
+
 <link href="{{ asset('Admin/vendors/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet" />
 <link href="{{ asset('Admin/vendors/font-awesome/css/font-awesome.min.css')}}" rel="stylesheet" />
 <link href="{{ asset('Admin/vendors/themify-icons/css/themify-icons.css')}}" rel="stylesheet" />
@@ -11,4 +12,5 @@
 <!-- THEME STYLES-->
 <link href="{{ asset('Admin/css/main.min.css')}}" rel="stylesheet" />
 <link href="{{ asset('Admin/css/main.css')}}" rel="stylesheet" />
-<!-- <link rel="stylesheet" href="{{ asset('Admin/css/bootstrap.min.css')}}" type="text/css"> -->
+<link rel="stylesheet" href="{{ asset('Admin/css/jquery.dataTables.min.css')}}">
+<link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.1.0/css/buttons.dataTables.min.css">

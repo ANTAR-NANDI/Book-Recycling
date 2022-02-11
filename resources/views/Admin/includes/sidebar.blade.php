@@ -24,7 +24,7 @@
              <a href="{{route('admin-user-list')}}">Manage Users</a>
            </li>
            <li>
-             <a href="{{route('admin-user-list')}}">Reported Users</a>
+             <a href="{{route('admin-report-user')}}">Reported Users</a>
            </li>
            <li>
              <a href="{{route('admin-block-user')}}">Non-Paid User</a>
@@ -51,13 +51,13 @@
            <li>
              <a href="{{route('admin-messages')}}">Messages</a>
            </li>
-           <li>
+           <!-- <li>
              <a href="{{route('admin-report-user')}}">Users Report</a>
-           </li>
+           </li> -->
 
          </ul>
        </li>
-       <li>
+       <!-- <li>
          <a href="javascript:;"><i class="sidebar-item-icon fa fa-table"></i>
            <span class="nav-label">Reports</span><i class="fa fa-angle-left arrow"></i></a>
          <ul class="nav-2-level collapse">
@@ -81,7 +81,7 @@
            </li>
 
          </ul>
-       </li>
+       </li> -->
        <!-- <li>
          <a href="javascript:;"><i class="sidebar-item-icon fa fa-bar-chart"></i>
            <span class="nav-label">Charts</span><i class="fa fa-angle-left arrow"></i></a>

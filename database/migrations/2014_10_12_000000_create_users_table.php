@@ -24,8 +24,9 @@ class CreateUsersTable extends Migration
             $table->date('reg_date')->nullable();
             $table->date('expired_date')->nullable();
             $table->string('role')->nullable();
-            $table->boolean('active');
-            $table->boolean('ispaid');
+            $table->boolean('isactive')->default(1);
+            $table->boolean('ispaid')->default(1);
+            $table->boolean('isreported')->default(0);;
             $table->rememberToken();
             $table->timestamps();
         });

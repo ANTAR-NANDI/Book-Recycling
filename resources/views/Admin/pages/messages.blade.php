@@ -1,302 +1,104 @@
 @extends('Admin.layouts.defaults')
 @section('abc')
 <div class="content-wrapper">
-    <!-- START PAGE CONTENT-->
-    <!-- <div class="page-heading">
-        <h1 class="page-title">Profile</h1>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="index.html"><i class="la la-home font-20"></i></a>
-            </li>
-            <li class="breadcrumb-item">Profile</li>
-        </ol>
-    </div> -->
-    <div class="page-content fade-in-up">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="table-responsive">
-                            <table class="datatable table table-hover table-center mb-0">
-                                <thead>
-                                    <tr>
-                                        <th>Invoice Number</th>
-                                        <th>Patient ID</th>
-                                        <th>Patient Name</th>
-                                        <th>Total Amount</th>
-                                        <th>Created Date</th>
-                                        <th class="text-center">Status</th>
-                                        <th class="text-right">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0001</td>
-                                        <td>#PT001</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html">Charlene Reed </a>
-                                            </h2>
-                                        </td>
-                                        <td>$100.00</td>
-                                        <td>9 Sep 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm btn-primary mr-2">
-                                                    <i class="fa fa-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm btn-primary" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fa fa-trash"></i> Delete
-                                                </a>
+    <div>
+        <div class="modal fade custom-modal" id="appt_details">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Appointment Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="info-details">
+                            <li>
+                                <div class="details-header">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <span class="title">#APT0001</span>
+                                            <span class="text">21 Oct 2019 10:00 AM</span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="text-right">
+                                                <button type="button" class="btn bg-success-light btn-sm" id="topup_status">Completed</button>
                                             </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0002</td>
-                                        <td>#PT002</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html">Travis Trimble </a>
-                                            </h2>
-                                        </td>
-                                        <td>$200.00</td>
-                                        <td>29 Oct 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fa fa-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fa fa-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0003</td>
-                                        <td>#PT003</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html">Carl Kelly</a>
-                                            </h2>
-                                        </td>
-                                        <td>$250.00</td>
-                                        <td>25 Sep 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0004</td>
-                                        <td>#PT004</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html"> Michelle Fairfax</a>
-                                            </h2>
-                                        </td>
-                                        <td>$150.00</td>
-                                        <td>9 Oct 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0005</td>
-                                        <td>#PT005</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html">Gina Moore</a>
-                                            </h2>
-                                        </td>
-                                        <td>$350.00</td>
-                                        <td>19 Nov 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0006</td>
-                                        <td>#PT006</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html">Elsie Gilley</a>
-                                            </h2>
-                                        </td>
-                                        <td>$300.00</td>
-                                        <td>12 Oct 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0007</td>
-                                        <td>#PT007</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html"> Joan Gardner</a>
-                                            </h2>
-                                        </td>
-                                        <td>$250.00</td>
-                                        <td>25 Oct 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0008</td>
-                                        <td>#PT008</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html"> Daniel Griffing</a>
-                                            </h2>
-                                        </td>
-                                        <td>$150.00</td>
-                                        <td>30 Oct 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0009</td>
-                                        <td>#PT009</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html">Walter Roberson</a>
-                                            </h2>
-                                        </td>
-                                        <td>$100.00</td>
-                                        <td>5 Nov 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td><a href="invoice.html">#IN0010</td>
-                                        <td>#PT010</td>
-                                        <td>
-                                            <h2 class="table-avatar">
-
-                                                <a href="profile.html">Robert Rhodes </a>
-                                            </h2>
-                                        </td>
-                                        <td>$120.00</td>
-                                        <td>7 Nov 2019</td>
-                                        <td class="text-center">
-                                            <span class="badge badge-pill bg-success inv-badge">Paid</span>
-                                        </td>
-                                        <td class="text-right">
-                                            <div class="actions">
-
-                                                <a data-toggle="modal" href="#edit_invoice_report" class="btn btn-sm bg-success-light mr-2">
-                                                    <i class="fe fe-pencil"></i> Edit
-                                                </a>
-                                                <a class="btn btn-sm bg-danger-light" data-toggle="modal" href="#delete_modal">
-                                                    <i class="fe fe-trash"></i> Delete
-                                                </a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="title">Status:</span>
+                                <span class="text">Completed</span>
+                            </li>
+                            <li>
+                                <span class="title">Confirm Date:</span>
+                                <span class="text">29 Jun 2019</span>
+                            </li>
+                            <li>
+                                <span class="title">Paid Amount</span>
+                                <span class="text">$450</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <div class=" table-responsive mt-4">
+            <table id="myTable" class="table-striped">
+                <thead>
+                    <tr>
+                        <th>USER ID</th>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th> Image</th>
+                        <th> Date Posted</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($messages as $d)
+                    <tr>
+                        <td>{{$d->id}}</td>
+                        <td>{{$d->name}}</td>
+                        <td>{{$d->email}}</td>
+                        <td>
+                            {{$d->mobile}}
+                        </td>
+                        <td>
+                            {{$d->msg_date}}
+                        </td>
+
+                        <td>
+                            {{$d->message}}
+                        </td>
+                        <td class="text-center">
+
+                            <a href="{{ URL::to('delete/'.$d->id)}}" class="btn btn-sm btn-danger mr-2">
+                                <i class="fa fa-pencil"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                    @endforeach
+
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>USER ID</th>
+                        <th>User Name</th>
+                        <th>Email</th>
+                        <th> Mobile</th>
+                        <th class="text-center">Status</th>
+                        <th class="text-center">Action</th>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
     </div>
-</div>
-@stop
+
+
+    @stop

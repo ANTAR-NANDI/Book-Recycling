@@ -52,11 +52,12 @@ class UserController extends Controller
         $obj->lastname = $request->lastname;
         $obj->email = $request->email;
         $obj->reg_date = Carbon::now();
-        $obj->expired_date =Carbon::now()->addDays(30);
+        $obj->expired_date = Carbon::now()->addDays(-30);
         $obj->password = md5($request->password);
         $obj->mobile = $request->mobile;
-        $obj->active = 1;
+        $obj->isactive = 1;
         $obj->ispaid = 1;
+        $obj->isreported = 0;
         $obj->role = "user";
         if ($obj->save()) {
             return redirect()->back()->with('message', 'Thanks for Registration!');
@@ -75,7 +76,7 @@ class UserController extends Controller
             ->first();
         //dd($obj);
         if ($obj) {
-           // dd($obj);
+            // dd($obj);
             $request->session()->put('userid', $obj->id);
             $request->session()->put('firstname', $obj->firstname);
             $request->session()->put('lastname', $obj->lastname);

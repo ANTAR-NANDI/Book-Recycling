@@ -66,33 +66,54 @@
                         <td>{{$d->firstname}} {{$d->lastname}}</td>
                         <td>{{$d->email}}</td>
                         <td>{{$d->mobile}}</td>
-                        
-                       
-                            
-                            <td>
-                           Test       
+
+
+
+                        <td>
+                            Test
                         </td>
 
-                            
-                        
+
+                        @if($d->isactive == 1)
                         <td>
                             <span class="badge badge-pill bg-success inv-badge">Active</span>
                         </td>
+                        @else
+                        <td>
+                            <span class="badge badge-pill bg-danger inv-badge">Not Active</span>
+                        </td>
+                        @endif
+
                         <td class="text-center">
                             <div class="actions">
-
-                                <a data-toggle="modal" href="#appt_details" class="btn btn-sm btn-primary mr-2">
-                                    <i class="fa fa-pencil"></i> Edit
-                                </a>
-                                <a href="{{ URL::to('delete/'.$d->id)}}" class="btn btn-sm btn-primary mr-2">
-                                    <i class="fa fa-pencil"></i> Block
-                                </a>
-                                <a class="btn btn-sm btn-danger" data-toggle="modal" href="#appt_details">
+                                <a class="btn btn-sm btn-danger" data-toggle="modal" href="#{{ $d->id }}">
                                     <i class="fa fa-trash"></i> Delete
                                 </a>
                             </div>
                         </td>
                     </tr>
+                    <div>
+                        <div id="{{ $d->id }}" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+
+                                        <h4 class="modal-title">Delete Confirmation</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Do You Want to Block This User??</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="{{ URL::to('admin/delete-user/'.$d->id)}}" class="btn btn-danger">Delete</a>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
                     @endforeach
 
                 </tbody>

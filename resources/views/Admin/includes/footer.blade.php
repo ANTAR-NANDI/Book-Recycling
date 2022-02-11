@@ -160,7 +160,7 @@
 <!-- CORE SCRIPTS-->
 <script src="{{ asset('Admin/js/app.min.js')}}" type="text/javascript"></script> -->
 <!-- PAGE LEVEL SCRIPTS-->
-<script src="{{ asset('Admin/js/scripts/dashboard_1_demo.js')}}" type="text/javascript"></script>
+<!-- <script src="{{ asset('Admin/js/scripts/dashboard_1_demo.js')}}" type="text/javascript"></script> -->
 <script src="https://cdn.datatables.net/buttons/2.1.0/js/dataTables.buttons.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>

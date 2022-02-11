@@ -24,8 +24,9 @@ class UserTableSeeder extends Seeder
                 'mobile' => '01824506162',
                 'reg_date' => Carbon::now(),
                 'role'    => 'admin',
-                'active' => 1,
-                'ispaid' => 1
+                'isactive' => 1,
+                'ispaid' => 1,
+                'isreported' => 0,
             ]
         );
         DB::table('users')->insert(
@@ -37,8 +38,9 @@ class UserTableSeeder extends Seeder
                 'mobile' => '01835896311',
                 'reg_date' => Carbon::now(),
                 'role'    => 'user',
-                'active' => 1,
-                'ispaid' => 1
+                'isactive' => 1,
+                'ispaid' => 1,
+                'isreported' => 0,
             ]
         );
         DB::table('users')->insert(
@@ -50,8 +52,9 @@ class UserTableSeeder extends Seeder
                 'mobile' => '01831147334',
                 'reg_date' => Carbon::now(),
                 'role'    => 'user',
-                'active' => 1,
-                'ispaid' => 1
+                'isactive' => 1,
+                'ispaid' => 1,
+                'isreported' => 0,
             ]
         );
         DB::table('users')->insert(
@@ -63,8 +66,9 @@ class UserTableSeeder extends Seeder
                 'mobile' => '01856893041',
                 'reg_date' => Carbon::now(),
                 'role'    => 'user',
-                'active' => 1,
-                'ispaid' => 1
+                'isactive' => 1,
+                'ispaid' => 1,
+                'isreported' => 0,
             ]
         );
     }

@@ -15,9 +15,6 @@ use App\Http\Controllers\Admin\AdminController;
 |
 */
 
-Route::group(
-    ['middleware' => 'IsAdmin'],
-    function () {
 Route::get('login', [UserController::class, 'login'])->name('login');
 Route::get('register', [UserController::class, 'register'])->name('register');
 Route::get('logout', [UserController::class, 'logout'])->name('logout');
@@ -29,8 +26,8 @@ Route::get('shop', [UserController::class, 'shop'])->name('shop');
 Route::post('registerstore', [UserController::class, 'registerstore'])->name('registerstore');
 Route::post('loginstore', [UserController::class, 'loginstore'])->name('loginstore');
 Route::get('contactstore', [UserController::class, 'contactstore'])->name('contactstore');
-    }
-);
+
+
 
 //User-Backoffice Routes 
 Route::group(['middleware' => 'IsUser'], function () {
@@ -42,19 +39,47 @@ Route::group(['middleware' => 'IsUser'], function () {
         Route::get('/logout', [BackOfficeController::class, 'logout'])->name('backoffice-logout');
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //Admin Routes
 Route::group(['middleware' => 'IsAdmin'], function () {
     Route::prefix('admin')->group(function () {
         Route::get('/home', [AdminController::class, 'index'])->name('admin-home');
-        Route::get('/profile', [AdminController::class, 'profile'])->name('admin-profile');
-        Route::get('/user-list', [AdminController::class, 'user_list'])->name('admin-user-list');
-        Route::get('/block-user', [AdminController::class, 'block_user'])->name('admin-block-user');
         Route::get('/books-list', [AdminController::class, 'books_list'])->name('admin-books-list');
         Route::get('/manage-posts', [AdminController::class, 'manage_post'])->name('admin-manage-post');
         Route::get('/messages', [AdminController::class, 'messages'])->name('admin-messages');
-        Route::get('/report-user', [AdminController::class, 'report_user'])->name('admin-report-user');
+      
         Route::get('/total-sales', [AdminController::class, 'total_sales'])->name('admin-total-sales');
+        //Block user
+        Route::get('/block-user', [AdminController::class, 'block_user'])->name('admin-block-user');
+        Route::get('/update-block-user/{id}', [AdminController::class, 'update_block_user']);
+        //Users Routes
+        Route::get('/user-list', [AdminController::class, 'user_list'])->name('admin-user-list');
+        Route::get('/delete-user/{id}', [AdminController::class, 'delete_user']);
+        //Profile routes
+        Route::get('/profile', [AdminController::class, 'profile'])->name('admin-profile');
         Route::post('/update-profile/{id}', [AdminController::class, 'update_data']);
         Route::post('/update-password/{id}', [AdminController::class, 'update_password']);
+        //Report Users
+        Route::get('/report-user', [AdminController::class, 'report_user'])->name('admin-report-user');
+        Route::post('/send-notice/{id}', [AdminController::class, 'send_notice']);
+
+        
     });
 });

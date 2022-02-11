@@ -81,7 +81,7 @@
                                 <a data-toggle="modal" href="#appt_details" class="btn btn-sm btn-primary mr-2">
                                     <i class="fa fa-pencil"></i> Approve
                                 </a>
-                                <a href="{{ URL::to('delete/'.$d->id)}}" class="btn btn-sm btn-primary mr-2">
+                                <a href="{{ URL::to('delete/'.$d->id)}}" class="btn btn-sm btn-danger mr-2">
                                     <i class="fa fa-pencil"></i> Decline
                                 </a>
 

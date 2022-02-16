@@ -5,11 +5,14 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Session;
+use App\Http\Requests\StoreCategoryRequest;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Message;
 use App\Models\Contact;
+use App\Models\Category;
+
 class AdminController extends Controller
 {
     public function update_data(Request $request, $id)
@@ -56,7 +59,6 @@ class AdminController extends Controller
 
             return redirect()->to('admin/report-user');
         }
-        
     }
 
     public function Profile()
@@ -81,7 +83,7 @@ class AdminController extends Controller
             return redirect()->to('admin/user-list');
         }
     }
-    
+
     public function block_user()
     {
         $reg_date = Carbon::now();
@@ -89,17 +91,16 @@ class AdminController extends Controller
             ->where('isactive', '=', 1)
             ->where('expired_date', '<', Carbon::now())
             ->get();
-           // dd($users);
+        // dd($users);
         return view('Admin.pages.block-user', ['users' => $users]);
     }
     public function update_block_user($id)
     {
         $obj = User::find($id);
         $obj->isactive = 0;
-            if ($obj->save()) {
-                return redirect()->to('admin/block-user')->with('message', 'Updated Successfully!');
-            }
-        
+        if ($obj->save()) {
+            return redirect()->to('admin/block-user')->with('message', 'Updated Successfully!');
+        }
     }
     public function books_list()
     {
@@ -113,19 +114,19 @@ class AdminController extends Controller
     }
     public function messages()
     {
-        
+
         $messages = Contact::all();
         return view('Admin.pages.messages', ['messages' => $messages]);
     }
     public function report_user()
     {
         $users = DB::table('reports')
-        ->leftjoin('users', 'users.id', '=', 'reports.reporter_user_id')
-        ->where('isactive', '=', 1)
-        ->get();
+            ->leftjoin('users', 'users.id', '=', 'reports.reporter_user_id')
+            ->where('isactive', '=', 1)
+            ->get();
         $users2 = User::where('role', '=', 'user')
             ->get();
-        
+
         // exit();
         return view('Admin.pages.report-user', ['users' => $users, 'users2' => $users2]);
     }
@@ -136,5 +137,26 @@ class AdminController extends Controller
     public function index()
     {
         return view('Admin.pages.index');
+    }
+    public function add_category()
+    {
+        return view('Admin.pages.addcategory');
+    }
+    public function Category_Store(StoreCategoryRequest $request)
+    {
+        $user_id = Session::get('userid');
+        $obj = new Category();
+        $obj->name = $request->name;
+        $obj->description = $request->description;
+        $obj->createby = $user_id;
+        if ($obj->save()) {
+            return redirect('admin/category-list');
+            // return back()->with($notification);
+        }
+    }
+    public function category_list()
+    {
+        $categories = Category::all();
+        return view('Admin.pages.categories-list', ['categories' => $categories]);
     }
 }

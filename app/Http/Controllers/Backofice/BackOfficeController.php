@@ -20,9 +20,13 @@ class BackOfficeController extends Controller
         return view('User-Backoffice.pages.contact');
     }
 
-    public function shop()
+    public function shop() 
     {
         return view('User-Backoffice.pages.shop');
+    }
+    public function createpost()
+    {
+        return view('User-Backoffice.pages.addpost');
     }
     public function register()
     {

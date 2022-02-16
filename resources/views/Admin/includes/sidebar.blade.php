@@ -57,6 +57,19 @@
 
          </ul>
        </li>
+       <li>
+         <a href="javascript:;"><i class="sidebar-item-icon fa fa-edit"></i>
+           <span class="nav-label">Category</span><i class="fa fa-angle-left arrow"></i></a>
+         <ul class="nav-2-level collapse">
+           <li>
+             <a href="{{route('admin-add-category')}}">Add Category</a>
+           </li>
+           <li>
+             <a href="{{route('admin-manage-category')}}">Manage Category</a>
+           </li>
+
+         </ul>
+       </li>
        <!-- <li>
          <a href="javascript:;"><i class="sidebar-item-icon fa fa-table"></i>
            <span class="nav-label">Reports</span><i class="fa fa-angle-left arrow"></i></a>

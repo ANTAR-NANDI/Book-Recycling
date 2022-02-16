@@ -26,7 +26,7 @@ class CreateUsersTable extends Migration
             $table->string('role')->nullable();
             $table->boolean('isactive')->default(1);
             $table->boolean('ispaid')->default(1);
-            $table->boolean('isreported')->default(0);;
+            $table->boolean('isreported')->default(0);
             $table->rememberToken();
             $table->timestamps();
         });

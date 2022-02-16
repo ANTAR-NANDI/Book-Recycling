@@ -35,24 +35,11 @@ Route::group(['middleware' => 'IsUser'], function () {
         Route::get('/home', [BackOfficeController::class, 'index'])->name('backoffice-home');
         Route::get('/about', [BackOfficeController::class, 'about_us'])->name('backoffice-about');
         Route::get('/contact', [BackOfficeController::class, 'contact_us'])->name('backoffice-contact');
+        Route::get('/book/post', [BackOfficeController::class, 'createpost'])->name('backoffice-post-book');
         Route::get('/shop', [BackOfficeController::class, 'shop'])->name('backoffice-shop');
         Route::get('/logout', [BackOfficeController::class, 'logout'])->name('backoffice-logout');
     });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -64,7 +51,7 @@ Route::group(['middleware' => 'IsAdmin'], function () {
         Route::get('/books-list', [AdminController::class, 'books_list'])->name('admin-books-list');
         Route::get('/manage-posts', [AdminController::class, 'manage_post'])->name('admin-manage-post');
         Route::get('/messages', [AdminController::class, 'messages'])->name('admin-messages');
-      
+
         Route::get('/total-sales', [AdminController::class, 'total_sales'])->name('admin-total-sales');
         //Block user
         Route::get('/block-user', [AdminController::class, 'block_user'])->name('admin-block-user');
@@ -79,7 +66,12 @@ Route::group(['middleware' => 'IsAdmin'], function () {
         //Report Users
         Route::get('/report-user', [AdminController::class, 'report_user'])->name('admin-report-user');
         Route::post('/send-notice/{id}', [AdminController::class, 'send_notice']);
+        //Category Routes
+        Route::get('/add/category', [AdminController::class, 'add_category'])->name('admin-add-category');
+        Route::get('/category-list', [AdminController::class, 'category_list'])->name('admin-manage-category');
+        Route::post('/Category_Store', [AdminController::class, 'Category_Store']);
 
-        
+        // Route::get('/update-block-user/{id}', [AdminController::class, 'update_block_user']);  
+        // Route::get('/delete-user/{id}', [AdminController::class, 'delete_user']);
     });
 });

@@ -5,10 +5,12 @@ namespace App\Http\Controllers\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\User\StoreUserRequest;
 use App\Http\Requests\User\StoreContactRequest;
 use App\Models\User;
 use App\Models\Contact;
+use App\Models\Book;
 use Carbon\Carbon;
 use Session;
 
@@ -16,7 +18,15 @@ class UserController extends Controller
 {
     public function index()
     {
-        return view('User.pages.index');
+        // $books = DB::table('books')
+        // ->select('cat_id', 'count(cat_id) as total')
+        //     ->leftjoin('categories', 'categories.id', '=', 'books.cat_id')
+        //     ->groupBy('cat_id')
+
+        //     ->get();
+        // dd($books);
+        // return view('User.pages.index', ['users' => $books]);
+         return view('User.pages.index');
     }
     public function about_us()
     {

@@ -45,7 +45,7 @@
 							<li><a href="{{route('backoffice-shop')}}">Shop</a></li>
 							<li><a href="{{route('backoffice-about')}}">About</a></li>
 							<li><a href="{{route('backoffice-contact')}}">Contact</a></li>
-							<li><a href="{{route('backoffice-contact')}}">Post A Book</a></li>
+							<li><a href="{{route('backoffice-post-book')}}">Post A Book</a></li>
 
 
 

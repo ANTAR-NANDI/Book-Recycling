@@ -36,7 +36,11 @@ Route::group(['middleware' => 'IsUser'], function () {
         Route::get('/about', [BackOfficeController::class, 'about_us'])->name('backoffice-about');
         Route::get('/contact', [BackOfficeController::class, 'contact_us'])->name('backoffice-contact');
         Route::get('/book/post', [BackOfficeController::class, 'createpost'])->name('backoffice-post-book');
+        Route::post('/book/store', [BackOfficeController::class, 'store']);
         Route::get('/shop', [BackOfficeController::class, 'shop'])->name('backoffice-shop');
+        Route::get('/search-by-category/{id}', [BackOfficeController::class, 'book_by_category']);
+        Route::get('/book-details/{id}', [BackOfficeController::class, 'book_details']);
+        
         Route::get('/logout', [BackOfficeController::class, 'logout'])->name('backoffice-logout');
     });
 });

@@ -8,82 +8,17 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="row">
+					@foreach($categories as $d)
 					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
 						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
 							<div class="categories__text">
-								<h4>কম্পিউটার, ইন্টারনেট ও প্রোগ্রামিং</h4>
+								<h4>{{$d->name}}</h4>
 								<p style="color:black">358 items</p>
 								<a href="#">Shop now</a>
 							</div>
 						</div>
 					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
-							<div class="categories__text">
-								<h4>সায়েন্স ফিকশন</h4>
-								<p style="color:black">273 items</p>
-								<a href="#">Shop now</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
-							<div class="categories__text">
-								<h4>বিদেশি ভাষার বই</h4>
-								<p style="color:black">159 items</p>
-								<a href="#">Shop now</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
-							<div class="categories__text">
-								<h4>বিদেশি ভাষার বই</h4>
-								<p style="color:black">792 items</p>
-								<a href="#">Shop now</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-6">
-				<div class="row">
-					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
-							<div class="categories__text">
-								<h4>কম্পিউটার, ইন্টারনেট ও প্রোগ্রামিং</h4>
-								<p style="color:black">358 items</p>
-								<a href="#">Shop now</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
-							<div class="categories__text">
-								<h4>সায়েন্স ফিকশন</h4>
-								<p style="color:black">273 items</p>
-								<a href="#">Shop now</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
-							<div class="categories__text">
-								<h4>বিদেশি ভাষার বই</h4>
-								<p style="color:black">159 items</p>
-								<a href="#">Shop now</a>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-6 p-0">
-						<div class="categories__item set-bg" data-setbg="{{ asset('User/img/product/category-2.jpg')}}">
-							<div class="categories__text">
-								<h4>বিদেশি ভাষার বই</h4>
-								<p style="color:black">792 items</p>
-								<a href="#">Shop now</a>
-							</div>
-						</div>
-					</div>
+					@endforeach
 				</div>
 			</div>
 		</div>
@@ -103,18 +38,22 @@
 			<div class="col-lg-10 col-md-10">
 				<ul class="filter__controls">
 					<li class="active" data-filter="*">All</li>
-					<li data-filter=".women">Drama's</li>
-					<li data-filter=".men">Thriller’s</li>
+					@foreach($categories as $d)
+
+					<li data-filter=".women">{{$d->name}}</li>
+					<!-- <li data-filter=".men">Thriller’s</li>
 					<li data-filter=".kid">Comics’s</li>
 					<li data-filter=".accessories">Romantic</li>
 					<li data-filter=".cosmetic">Biography</li>
 					<li data-filter=".kid">Comics’s</li>
 					<li data-filter=".accessories">Romantic</li>
-					<li data-filter=".cosmetic">Biography</li>
+					<li data-filter=".cosmetic">Biography</li> -->
+					@endforeach
 				</ul>
 			</div>
 		</div>
 		<div class="row property__gallery">
+			@foreach($Books as $d)
 			<div class="col-lg-3 col-md-4 col-sm-6 mix women">
 				<div class="product__item">
 					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
@@ -126,168 +65,15 @@
 						</ul>
 					</div>
 					<div class="product__item__text">
-						<h6><a href="#">Buttons tweed blazer</a></h6>
-						<div class="product__price">$ 59.0</div>
+						<h6><a href="#">{{$d->name}}</a></h6>
+						<div class="product__price">$ {{$d->price}}</div>
 						<a href="#">
 							<button type="button" class="btn btn-light btn-sm mt-2" data-mdb-ripple-color="dark">Details</button>
 						</a>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 mix men">
-				<div class="product__item">
-					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
-						<ul class="product__hover">
-							<li><a href="img/product/product-2.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-							<li><a href="#"><span class="icon_heart_alt"></span></a></li>
-							<li><a href="#"><span class="icon_bag_alt"></span></a></li>
-						</ul>
-					</div>
-					<div class="product__item__text">
-						<h6><a href="#">Flowy striped skirt</a></h6>
-
-						<div class="product__price">Exchange</div>
-						<div class="rating">
-							<button type="button" class="btn btn-light btn-sm mt-2" data-mdb-ripple-color="dark">Details</button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 mix accessories">
-				<div class="product__item">
-					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
-						<div class="label stockout">out of stock</div>
-						<ul class="product__hover">
-							<li><a href="img/product/product-3.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-							<li><a href="#"><span class="icon_heart_alt"></span></a></li>
-							<li><a href="#"><span class="icon_bag_alt"></span></a></li>
-						</ul>
-					</div>
-					<div class="product__item__text">
-						<h6><a href="#">Cotton T-Shirt</a></h6>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product__price">$ 59.0</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 mix cosmetic">
-				<div class="product__item">
-					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
-						<ul class="product__hover">
-							<li><a href="img/product/product-4.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-							<li><a href="#"><span class="icon_heart_alt"></span></a></li>
-							<li><a href="#"><span class="icon_bag_alt"></span></a></li>
-						</ul>
-					</div>
-					<div class="product__item__text">
-						<h6><a href="#">Slim striped pocket shirt</a></h6>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product__price">$ 59.0</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 mix kid">
-				<div class="product__item">
-					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-5.jpg')}}">
-						<ul class="product__hover">
-							<li><a href="img/product/product-5.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-							<li><a href="#"><span class="icon_heart_alt"></span></a></li>
-							<li><a href="#"><span class="icon_bag_alt"></span></a></li>
-						</ul>
-					</div>
-					<div class="product__item__text">
-						<h6><a href="#">Fit micro corduroy shirt</a></h6>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product__price">$ 59.0</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-				<div class="product__item sale">
-					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-6.jpg')}}">
-						<div class="label sale">Sale</div>
-						<ul class="product__hover">
-							<li><a href="img/product/product-6.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-							<li><a href="#"><span class="icon_heart_alt"></span></a></li>
-							<li><a href="#"><span class="icon_bag_alt"></span></a></li>
-						</ul>
-					</div>
-					<div class="product__item__text">
-						<h6><a href="#">Tropical Kimono</a></h6>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-				<div class="product__item">
-					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-7.jpg')}}">
-						<ul class="product__hover">
-							<li><a href="img/product/product-7.jpg')}}" class="image-popup"><span class="arrow_expand"></span></a></li>
-							<li><a href="#"><span class="icon_heart_alt"></span></a></li>
-							<li><a href="#"><span class="icon_bag_alt"></span></a></li>
-						</ul>
-					</div>
-					<div class="product__item__text">
-						<h6><a href="#">Contrasting sunglasses</a></h6>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product__price">$ 59.0</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3 col-md-4 col-sm-6 mix women men kid accessories cosmetic">
-				<div class="product__item sale">
-					<div class="product__item__pic set-bg" data-setbg="{{ asset('User/img/product/product-8.jpg')}}">
-						<div class="label">Sale</div>
-						<ul class="product__hover">
-							<li><a href="img/product/product-8.jpg" class="image-popup"><span class="arrow_expand"></span></a></li>
-							<li><a href="#"><span class="icon_heart_alt"></span></a></li>
-							<li><a href="#"><span class="icon_bag_alt"></span></a></li>
-						</ul>
-					</div>
-					<div class="product__item__text">
-						<h6><a href="#">Water resistant backpack</a></h6>
-						<div class="rating">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<div class="product__price">$ 49.0 <span>$ 59.0</span></div>
-					</div>
-				</div>
-			</div>
+			@endforeach
 		</div>
 	</div>
 </section>
